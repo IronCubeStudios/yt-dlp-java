@@ -4,7 +4,7 @@ A simple java wrapper for [yt-dlp](https://github.com/yt-dlp/yt-dlp) executable
 
 # Prerequisite
 
-:warning: yt-dlp should be installed and available in your `$PATH.
+:warning: yt-dlp should be installed and available in your `$PATH.`
 
 [How to properly install yt-dlp executable](https://github.com/yt-dlp/yt-dlp#installation)
 
