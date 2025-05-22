@@ -1,0 +1,24 @@
+* yt-dlp-java
+
+A simple java wrapper for[[yt-dlp][ https://github.com/yt-dlp/yt-dlp]] executable
+
+* Prerequisite
+
+:warning: yt-dlp should be installed and available in your `$PATH.`
+
+[[How to properly install yt-dlp executable][https://github.com/yt-dlp/yt-dlp#installation]]
+
+Otherwise you will get this error :
+
+#+BEGIN_SRC
+Cannot run program "yt-dlp" (in directory "/Users/my/beautiful/path"): error=2, No such file or directory
+#+END_SRC
+
+* Usage
+[[make-request.org][make-request.org]]
+
+* Installation
+
+Pending..
+* Links
+** [yt-dlp documentation](https://github.com/yt-dlp/yt-dlp)

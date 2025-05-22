@@ -1,0 +1,47 @@
+
+* Make request
+
+** Video url to download
+
+#+BEGIN_SRC
+String videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+#+END_SRC
+
+** Destination directory
+#+BEGIN_SRC
+String directory = System.getProperty("user.home");
+#+END_SRC
+** Build request
+
+#+BEGIN_SRC
+YtDlpRequest request = new YtDlpRequest(videoUrl, directory);
+request.setOption("ignore-errors");		// --ignore-errors
+request.setOption("output", "%(id)s");	// --output "%(id)s"
+request.setOption("retries", 10);		// --retries 10
+#+END_SRC
+
+** Make request and return response
+
+#+BEGIN_SRC
+YtDlpResponse response = YtDlp.execute(request);
+
+#+END_SRC
+
+** Response
+
+#+BEGIN_SRC
+String stdOut = response.getOut(); // Executable output
+#+END_SRC
+
+
+** You may also specify a callback to get notified about the progress of the download:
+
+#+BEGIN_SRC
+YtDlpResponse response = YtDlp.execute(request, new DownloadProgressCallback() {
+          @Override
+          public void onProgressUpdate(float progress, long etaInSeconds) {
+              System.out.println(String.valueOf(progress) + "%");
+          }
+      });
+
+#+END_SRC
